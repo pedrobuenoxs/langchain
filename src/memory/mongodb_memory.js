@@ -2,8 +2,7 @@
 
 import { MongoClient } from "mongodb";
 import { BufferMemory } from "langchain/memory";
-const uri =
-  "mongodb+srv://chatuser:chat123@botbuilder.90fsdqg.mongodb.net/?retryWrites=true&w=majority";
+const uri = process.env.MONGODB_URI;
 
 class MongoDBMemory extends BufferMemory {
   constructor(fields) {
